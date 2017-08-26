@@ -1,0 +1,54 @@
+// all mixins that will be used in the site 
+// check out juice mixin library for ideas (such as calculating px to rem)
+
+
+// this mixin below is for adding styles to different media querys
+// to use this mixin use the below code:
+
+// @include respond-to("small") {
+    // include your code here for all styles you want on the small media query
+// }
+
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "small" {
+    @media (max-width: 665px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "medium" {
+    @media (max-width: 800px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "large" {
+    @media (max-width: 1000px) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "xlarge" {
+    @media (min-width: 1500px) {
+      @content;
+    }
+  }
+
+
+  @else {
+    @media ($breakpoint) {
+      @content;
+    }
+  }
+}
+
+// converts pixel font sizes into rems
+@mixin fontSize($sizeValue){
+    font-size: $sizeValue * 1px;
+    font-size: ($sizeValue/10) * 1em;
+}
+
+
+
+

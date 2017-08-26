@@ -1,0 +1,162 @@
+// AUDIO PLAYER STYLING 
+
+.audioplayer {
+	background: #000000;
+	.wrapper {
+		height: 54px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.play, .volume {
+		height: 54px;
+		border-right: 1px solid $breaklinegrey; 
+		border-left: 1px solid $breaklinegrey;
+		display: flex;
+		align-items: center;
+	}
+	img {
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+	p {
+		color: $green;
+		@include fontSize(14);
+		font-weight: $bold;
+		padding-right: 19px;
+		padding-left: 19px;
+	}
+}
+
+.audiotracker {
+	width: 40%;
+	height: 3px;
+	background: $breaklinegrey;
+}
+
+
+
+// SEE GENERAL STYLING FOR EPISODE DIVS IN EPISODE PARTIAL (_EPISODE.SCSS)
+
+.gallery {
+	background: $black;
+}
+
+.gallery__header {
+	letter-spacing: 2px;
+	display: flex;
+	padding: 95px 0;
+}
+
+.gallery__header--showall {
+	margin-left: 43%;
+}
+
+.gallery__header--showall:hover {
+	color: $green;
+}
+
+.gallery__linebreak {
+	background: $green;
+	border-radius: 50px;
+	height:4px; 
+}
+
+.podcasts {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.episode_one {
+	background: url(../assets/podcast-1.jpg);
+}
+
+.episode_two {
+	background: url(../assets/podcast-2.jpg);
+}
+
+.episode_three {
+	background: url(../assets/podcast-3.jpg);
+}
+
+.episode_four {
+	background: url(../assets/podcast-4.jpg);
+}
+
+.episode_five {
+	background: url(../assets/podcast-5.jpg);
+}
+
+.episode_six {
+	background: url(../assets/podcast-6.jpg);
+}
+
+.podcasts .episode {
+	padding: 3% 4%;
+    background-repeat: no-repeat; 
+    min-height: 350px; 
+    min-width: 48%; 
+    margin-bottom: 30px;
+	// chose a 30px margin as they were all inconsistent in the psd
+}
+
+.loadmorebutton {
+	text-align: center;
+	background: $breaklinegrey;
+	margin-top: 38px;
+	margin-bottom: 93px;
+	display: inline-block;
+	width: 100%;
+}
+
+.loadmorebutton:hover {
+	background: $purple;
+}
+
+.loadmorebutton a {
+	display: inline-block;
+	padding: 19px;
+	letter-spacing: 2px;
+	width: 100%;
+}
+
+.loadmorebutton a:hover {
+	color: $green;
+}
+
+// RESPONSIVE LARGE STYLING FOR GALLERY 
+
+@include respond-to("large") {
+	
+}
+
+
+// RESPONSIVE MEDIUM STYLING FOR GALLERY 
+
+@include respond-to("medium") {
+	.gallery__header {
+		justify-content: center;
+		padding: 65px 0;
+	}
+	.podcasts {
+		justify-content: center;
+	}
+}
+
+// RESPONSIVE SMALL STYLING FOR AUDIO PLAYER & GALLERY
+
+@include respond-to("small") {
+	.audioplayer {
+		img, p {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+
+	.podcasts .episode {
+		min-width: 100%;
+		min-height: auto;
+	}
+}

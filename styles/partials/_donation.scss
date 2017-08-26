@@ -1,0 +1,85 @@
+.donation {
+	background: $green;
+	text-align:  center;
+	padding: 110px 0;
+}
+
+.donation__header {
+		padding-bottom: 56px;
+		@include fontSize(36);
+	}
+
+.donation__background--accent {
+	@include fontSize(250);
+	font-family: $ptsans;
+	text-transform: uppercase;
+	color: rgba(0,0,0,0.02);
+	line-height: 100%;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.donation__blurb {
+	max-width: 738px;
+	display: inline-block;
+	text-align: left;
+	@include fontSize(24);
+	line-height: 32px;
+	.donation__blurb--accent {
+		font-weight: 700;
+		font-style: italic;
+	}
+}
+
+.donation__button {
+	margin-top: 59px;
+    background: #ffffff;
+    border-radius: 50px;
+    max-width: 217px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+	a {
+		color: $black;
+		display: inline-block;
+		padding: 18px 33px;
+		letter-spacing: 2px;
+
+	}
+}
+
+.donation__button:hover {
+	background: $black;
+	a:hover {
+		color: $green;
+	}
+}
+
+
+
+// RESPONSIVE LARGE STYLING FOR DONATION SECTION
+
+@include respond-to("large") {
+	.donation__background--accent {
+		@include fontSize(220);
+	}
+}
+
+
+// RESPONSIVE MEDIUM STYLING FOR DONATION SECTION
+
+@include respond-to("medium") {
+	.donation__background--accent {
+		@include fontSize(200);
+	}
+}
+
+
+// RESPONSIVE SMALL STYLING FOR DONATION SECTION
+
+@include respond-to("small") {
+	.donation__background--accent {
+		@include fontSize(100);
+	}
+}

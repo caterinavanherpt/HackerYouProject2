@@ -1,0 +1,54 @@
+// GENERAL STYLING FOR EPISODE DIVS 
+
+.episode__linebreak {
+	background: $breaklinegrey;
+	height: 12px;
+	border-radius: 50px;
+	margin-bottom: 36px;
+}
+
+.episode__info {
+	display: flex;
+	justify-content: space-between;
+}
+
+.episode__info--header, .episode__play {
+	color: $green;
+	font-weight: $normal;
+	// according to assets this should be bold but looks more like the original design at a font weight of 400
+}
+
+.episode__info--header i {
+	padding-left: 8px;
+}
+
+.episode__header {
+	padding: 30px 0;
+}
+
+.episode__play {
+	display: inline-block;
+	padding-top: 30px;
+	display: flex;
+	align-items: center;
+	letter-spacing: 2px;
+}
+
+.episode__play i {
+	padding-right: 11px;
+}
+
+.episode__play:hover {
+	color: $white;
+}
+
+// RESPONSVIE MEDIUM STYLING FOR GENERAL EPISODE DIVS 
+
+@include respond-to("medium") {
+	.episode__header, .episode__play, .episode__blurb {
+		padding: 15px 0;
+	}
+
+	
+}
+

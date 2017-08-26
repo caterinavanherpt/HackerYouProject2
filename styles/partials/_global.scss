@@ -1,0 +1,77 @@
+// global styles throughout the site
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: $ptsans;
+	color: $white;
+	text-transform: uppercase;
+}
+
+h1 {
+	@include fontSize(30);  
+	line-height: 36px;
+	font-weight: $normal;
+}
+
+h2 {
+	@include fontSize(32);
+	font-weight: $bold;
+	letter-spacing: 2px;
+}
+
+h3 {
+	@include fontSize(48);
+	color: $green;
+	font-weight: $bold;
+}
+
+h4 {
+	@include fontSize(16);
+	font-family: $roboto;
+	font-weight: $normal; 
+	// according to assets this should be bold but looks more like the original design at a font weight of 400
+	letter-spacing: 2px;
+}
+
+h5 {
+	font-weight: $normal;
+	@include fontSize(21);
+}
+
+a {
+	text-decoration: none;
+	@include fontSize(14);
+	color: white;
+}
+
+p {
+	@include fontSize(18);
+	font-family: $roboto;
+	text-transform: none;
+	line-height: 28px;
+	font-weight: $light;
+	// according to assets these should have been a font weight of 400 but 300 looked more like the design
+}
+
+ul {
+	list-style: none;
+}
+
+// wrapper styling
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1170px;
+	width: 90%;
+}
+
+
+// RESPONSIVE SMALL GLOBAL STYLES 
+
+@include respond-to("small") {
+	html {
+		font-size: 50%;
+	}
+}
