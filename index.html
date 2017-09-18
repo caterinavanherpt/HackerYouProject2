@@ -18,20 +18,27 @@
 		<!-- HEADER WRAPPER STARTS -->
 		<!-- NAV -->
 		<nav class="navigation">
-			<img src="assets/logo.png" alt="Soundbyte Logo">
-			<ul class=nav>
-				<li><a href="" class="nav__link">home</a></li>
-				<li><a href="" class="nav__link">about</a></li>
-				<li><a href="" class="nav__link">episodes</a></li>
+			<div class="navigation__header">
+				<button class="hamburger hamburger--squeeze" type="button">
+				  <span class="hamburger-box">
+				    <span class="hamburger-inner"></span>
+				  </span>
+				</button> 
+				<img src="assets/logo.png" alt="Soundbyte Logo">
+			</div>
+			<ul class="nav hide">
+				<li><a href="#home" class="nav__link">home</a></li>
+				<li><a href="#about" class="nav__link">about</a></li>
+				<li><a href="#episodes" class="nav__link">episodes</a></li>
 				<li><a href="" class="nav__link">news</a></li>
 				<li><a href="" class="nav__link">shop</a></li>
 				<li><a href="" class="nav__link">contact</a></li>
-				<li><a href="" class="nav__link nav__link--donate">donate</a></li>
-			</ul>
+				<li><a href="#donate" class="nav__link nav__link--donate">donate</a></li>
+			</ul> 
 		</nav>
 		<!-- END OF NAV -->
 		<!-- START OF WRAPPER DIV -->
-		<div class="wrapper header__content">
+		<div id="home" class="wrapper header__content">
 			<!-- SUBSCRIBE DIV -->
 			<div class="subscribe">
 				<h1 class="subscribe__header"><span class="subscribe__header--accent">A Podcast about tacos and Disney World by </span>Drew Minns</h1>
@@ -87,7 +94,7 @@
 		</section>
 		<!-- END OF AUDIO PLAYER SECTION -->
 		<!-- GALLERY SECTION -->
-		<section class="gallery">
+		<section id="episodes" class="gallery">
 			<!-- GALLERY WRAPPER STARTS -->
 			<div class="wrapper">
 				<div class="gallery__header">
@@ -170,7 +177,7 @@
 			<!-- GALLERY WRAPPER ENDS -->
 		</section>
 		<!-- ABOUT US SECTION -->
-		<section class="aboutUs">
+		<section id="about" class="aboutUs">
 			<!-- ABOUT US WRAPPER STARTS -->
 			<div class="wrapper">
 				<h2 class="aboutUs__header">about us</h2>
@@ -220,7 +227,7 @@
 			<!-- ABOUT US WRAPPER ENDS -->
 		</section>
 		<!-- DONATON SECTION -->
-		<section class="donation">
+		<section id="donate" class="donation">
 
 			<!-- DONTATION WRAPPER STARTS -->
 			<div class="wrapper">
@@ -331,9 +338,9 @@
 				<!-- END OF SOCIAL MEDIA ICONS DIV -->
 				<!-- WEBSITE NAV -->
 				<ul class=nav>
-					<li><a href="" class="nav__link">home</a></li>
-					<li><a href="" class="nav__link">about</a></li>
-					<li><a href="" class="nav__link">episodes</a></li>
+					<li><a href="#home" class="nav__link">home</a></li>
+					<li><a href="#about" class="nav__link">about</a></li>
+					<li><a href="#episodes" class="nav__link">episodes</a></li>
 					<li><a href="" class="nav__link">news</a></li>
 					<li><a href="" class="nav__link">shop</a></li>
 					<li><a href="" class="nav__link">contact</a></li>
@@ -346,5 +353,7 @@
 		<!-- FOOTER WRAPPER ENDS -->
 	</footer>
 	<!-- END OF FOOTER -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="scripts/scripts.js"></script>
 </body>
 </html>

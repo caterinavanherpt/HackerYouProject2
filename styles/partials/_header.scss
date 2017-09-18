@@ -13,15 +13,21 @@ header {
 	flex-direction: column;
 	justify-content: center;
 	border-bottom: solid 1px $breaklinegrey;
-	position: fixed;
 	width: 100%;
-	background: $purple;
-	z-index: 9999;
-	ul {
+}
+
+.nav {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	}
+}
+
+.navigation__header {
+	display: flex;
+}
+
+.hamburger {
+	display: none;
 }
 
 .navigation img {
@@ -55,11 +61,10 @@ header {
 // HEADER SECTION STYLES
 
 .header__content {
-	min-height: 80vh;
+	min-height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding-top: 200px;
 }
 
 .subscribe {
@@ -150,7 +155,6 @@ header {
 	}
 	.subscribe, .episode {
 		width: 75%;
-		padding-top: 100px;
 		padding-bottom: 100px;
 	}
 
@@ -167,10 +171,36 @@ header {
 // RESPONSIVE SMALL FOR THE HEADER
 
 @include respond-to("small") {
-	.navigation ul {
-		flex-wrap: wrap;
-		justify-content: center;
-		padding: 10px 0;
+	.navigation {
+		border-bottom: none;
+	}
+	
+	.navigation__header {
+		display: flex;
+		align-items: center;
+		img {
+			padding-top: 0;
+		}
+	}
+	
+	.hamburger {
+		display: inline-block;
+		padding-right: 0;
+	}
+
+	.show {
+		visibility: none;
+		height: 100vh;
+		flex-direction: column;
+		justify-content: flex-start;
+		@include fontSize(15);
+		a {
+			padding: 20px;
+		} 
+	}
+
+	.hide {
+		visibility: hidden;
 	}
 
 	.nav__link {
@@ -180,7 +210,7 @@ header {
 	.nav__link--donate {
 	margin: 0;
 	padding: 11px;
-	border: solid 2px $white;
+	border: none;
 	}
 
 	.subscribe__section {
@@ -192,7 +222,10 @@ header {
 	.subscribe, .header_episode {
 		width: 100%;
 	}
-
+	
+	.header__content {
+		padding-top: 0;
+	}
 	
 }
 
